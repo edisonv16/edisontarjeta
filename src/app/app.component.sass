@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap')
+
+.content
+    width: 1100px
+    height: 360px
+    margin: 0 auto
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.5)
+    position: relative
+    @media (min-width: 320px) and (max-width: 768px)
+        width: 690px
+        height: 565px
+    @media (min-width: 1px) and (max-width: 320px)
+        width: 100%
+        height: 315px
+
+    section
+        display: flex
+        @media (min-width: 320px) and (max-width: 768px)
+            display: block
+
+.datospersonales
+    width: 40%
+    display: flow-root
+    text-align: center
+    margin-top:30px
+    @media (min-width: 1px) and (max-width: 768px)
+        width: 100%
+        display: block
+        float: left
+    figure
+        border-radius: 50%
+        overflow: hidden
+        width: 120px
+        height: 120px
+        margin: 0 auto
+        img
+            width: 100%
+            height: 100%
+            display: block
+            object-fit: cover
+    h1,h2
+        text-align: center
+        margin: 10px 0 0 0
+        padding: 0
+        font-family: 'Open Sans', sans-serif
+
+    h1
+        color: blue
+        font-size: 18px
+    h2
+        color: gray
+        font-size: 14px
+        
+
+    .estrellas
+        margin: 0
+        padding: 0
+        li
+            display: inline-block
+    .ubicacion
+        font-family: 'Open Sans', sans-serif
+        font-weight: 100
+        &::before
+            content:""
+            display: inline-block 
+            width: 20px
+            height: 20px
+            margin: 0 10px 0 0
+            background:red
+            background-image: url()
+
+.datos_perfil
+    width: 57%
+    display: flow-root
+    margin: 30px 3% 0 0
+
+    h3 
+        font-family: 'Open Sans', sans-serif
+
+    p 
+        text-align: justify
+        font-size: 14px
+        color: gray
+        font-family: 'Open Sans', sans-serif
+    ul
+        display: flex
+        margin: 0
+        padding:0
+        li
+            display: flow-root
+            
+            
+            a
+                background-color: #E0E0E0
+                border-radius: 5px
+                margin: 0 10px 0 0
+                padding: 10px 15px
+                text-decoration: none
+                color: black
+                font-size: 13px
+                font-family: 'Open Sans', sans-serif
+                &:hover
+                    background-color: rgb(36,161,181)
+                    color: white
+
+    @media (min-width: 1px) and (max-width: 320px)
+        display: none
+    
+    @media (min-width: 320px) and (max-width: 768px)
+        width: 85%
+        overflow: auto
+        margin: 0 auto
+        ul
+            li
+                a
+                    font-size: 12px
+    
+        
+
+footer
+    width: 100%
+    border-top:1px solid gray
+    position: absolute
+    bottom: 0
+    height: 40px
+    text-align: center
+    a
+        text-decoration: none
+        line-height: 40px
+        font-family: 'Open Sans', sans-serif
+        span
+            font-weight: bold
+        &.movil
+            display: none
+        &.desktop
+            display: block
+
+        @media (min-width: 1px) and (max-width: 320px)
+            &.movil
+                display: block
+                text-align: left
+                padding: 0 0 0 10px
+            &.desktop
+                display: none
+    button
+        background-color: rgb(36,161,181)
+        color: white
+        text-align: center
+        width: 100px
+        padding: 5px
+        border: none
+        position: absolute
+        right: 20px
+        top: 7px
+        border-radius: 5px
+        font-family: 'Open Sans', sans-serif
