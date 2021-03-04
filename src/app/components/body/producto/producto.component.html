@@ -1,0 +1,20 @@
+
+<h1 class="d-block">{{proyecto.nombre | uppercase }} <small>{{proyecto.aparicion | date:'y'}}</small> </h1>
+<hr>
+<picture>
+    <source type="image/webp" [srcset]="proyecto.img">
+    <source type="image/jpeg" [srcset]="proyecto.img">
+    <img class="w-100" [src]="proyecto.img" [alt]="proyecto.nombre">
+</picture>
+<div class="card-body">
+    <h5 class="card-title">{{proyecto.nombre}}</h5>
+    <p class="card-text">{{proyecto.bio | slice:0:100 }}</p>
+    <p class="card-text"><small class="text-muted">{{proyecto.aparicion}}</small></p>
+
+    <a (click)="volver()" class="bnt btn-outline-danger btn-block">Regresar</a>
+
+    <button (click)="verProducto()"  type="button" class="btn btn-outline-primary btn-block" >Ver más...</button>
+
+    <!-- <a class="btn bnt-outline-primary" [routerLink]="[ '/producto',i]">Ver más link</a> -->
+</div>
+

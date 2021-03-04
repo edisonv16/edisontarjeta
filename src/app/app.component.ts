@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.sass']
 })
 export class AppComponent {
-  title = 'tarjeta';
+  title     = 'tarjeta';
+  nombre    : string = ' Capitán América';
+  personajes: string[] = ['Iroman', 'spiderman', 'thor', 'loki', 'groot'];
+  PI        : number = Math.PI;
+  porcentaje: number = 0.236;
 }

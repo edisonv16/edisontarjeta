@@ -1,0 +1,16 @@
+<h1>Resultado de la buscanda: <small>{{termino}}</small> </h1>
+
+<div class="row" *ngIf="proyecto.length == 0" >
+  <div class="col-12">
+    <div class="alert alert-info" role="alert">
+      No existen resultados con el término {{ termino }}
+    </div>
+  </div>
+
+</div>
+
+<div class="row">
+  <app-producto class="card mb-3 col-3" [proyecto]="busqueda" [index]="busqueda.idx" *ngFor="let busqueda of proyecto"></app-producto>  
+</div>
+
+
