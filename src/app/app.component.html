@@ -102,6 +102,58 @@
             <td>porcentaje</td>
             <td>{{porcentaje | percent: '2.2-2'}}</td>
           </tr>
+          <tr>
+            <td>{{salario}}</td>
+            <td>currency</td>
+            <td>{{salario | currency: 'COP': 'symbol-narrow': '.0-0' }}</td>
+          </tr>
+          <tr>
+            <td>{{salario}}</td>
+            <td>currency</td>
+            <td>{{salario | currency: 'EUR': 'symbol-narrow' }}</td>
+          </tr>
+          <tr>
+            <td>{{valorPromesa}}</td>
+            <td>async</td>
+            <td>{{valorPromesa | async }}</td>
+          </tr>
+          <tr>
+            <td>{{fecha}}</td>
+            <td>Feccha - Date</td>
+            <td>{{fecha | date }}</td>
+          </tr>
+          <tr>
+            <td>{{fecha}}</td>
+            <td>Feccha - Date</td>
+            <td>{{fecha | date: 'medium' }}</td>
+          </tr>
+          <tr>
+            <td>{{fecha}}</td>
+            <td>Feccha - Date</td>
+            <td>{{fecha | date: 'short' }}</td>
+          </tr>
+          <tr>
+            <td>{{fecha}}</td>
+            <td>Feccha - Date</td>
+            <td>{{fecha | date: 'MMMM - dd' }}</td>
+          </tr>
+          <tr>
+            <td>{{fecha}}</td>
+            <td>Feccha - Date</td>
+            <td>{{fecha}}</td>
+            <td>
+              date: 'MMMM - dd':'':'idioma'
+              <br>
+              <div (click)="idioma='es'" class="mr-1 btn btn-primary">Español</div>
+              <div (click)="idioma='en'" class="mr-1 btn btn-secondary">Inglés</div>
+              <div (click)="idioma='fr'" class="mr-1 btn btn-success">francés</div>
+            </td>
+          </tr>
+          <tr>
+            <td>{{fecha}}</td>
+            <td>Feccha - Date</td>
+            <td>{{fecha | date: 'MMMM - dd':'':idioma}}</td>
+          </tr>
         </tbody>
       </table>
     </div>
@@ -112,5 +164,16 @@
   <ul>
     <li *ngFor="let item of personajes | slice:0">{{item}}</li>
   </ul>
+
+  <h3>json</h3>
+  <div class="row">
+    <div class="col">
+      <pre>
+        {{heroe | json}}
+      </pre>
+    </div>
+  </div>
+
+
 
 </div>

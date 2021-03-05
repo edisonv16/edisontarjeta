@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, LOCALE_ID } from '@angular/core';
 
 //Rutas
 
@@ -13,13 +13,24 @@ import { ProyectosService } from './services/proyectos.service';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
+
+//Cambio de idioma
+import {registerLocaleData} from '@angular/common';
+import localeEs from '@angular/common/locales/es';
+import localeFr from '@angular/common/locales/fr';
+
+
 import { BodyComponent } from './components/body/body.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { GaleryComponent } from './components/body/galery/galery.component';
 import { HeaderComponent } from './components/header/header.component';
 import { ProductoComponent } from './components/body/producto/producto.component';
 import { BusquedaComponent } from './components/body/busqueda/busqueda.component';
+import { from } from 'rxjs';
 
+
+registerLocaleData(localeEs);
+registerLocaleData(localeFr);
 
 @NgModule({
   declarations: [
@@ -39,8 +50,11 @@ import { BusquedaComponent } from './components/body/busqueda/busqueda.component
     
   ],
   providers: [
+    {
+      provide: LOCALE_ID,
+      useValue: 'es'
+    },
     ProyectosService
-
   ],
   bootstrap: [AppComponent]
 })

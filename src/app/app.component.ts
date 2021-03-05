@@ -11,4 +11,26 @@ export class AppComponent {
   personajes: string[] = ['Iroman', 'spiderman', 'thor', 'loki', 'groot'];
   PI        : number = Math.PI;
   porcentaje: number = 0.236;
+  salario   : number = 877803;
+  fecha     : Date = new Date();
+  idioma    : string = 'fr';
+
+  valorPromesa = new Promise<string>((resolve) =>{
+
+    setTimeout(()=>{
+      resolve('llego la data');
+    }, 4500 );
+  });
+
+  heroe ={
+    nombre: 'Logan', 
+    clave:'Wolverine',
+    edad: 500,
+    direccion: {
+      calle: 'primera',
+      casa:20
+
+    }
+  }
+
 }
