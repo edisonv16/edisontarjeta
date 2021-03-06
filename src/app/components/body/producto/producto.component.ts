@@ -22,15 +22,8 @@ export class ProductoComponent implements OnInit {
     private router:Router,
     private activatedRoute: ActivatedRoute,
     private _proyectoSrvice:ProyectosService,
-    private _location: Location
-   
-    
-
-    ) {
-      this.activatedRoute.params.subscribe( params =>{
-        // this.proyect = this._proyectoSrvice.buscarProducto( params ['termino']);
-        this.proyecto = this._proyectoSrvice.getproyeto( params ['id']);
-      })
+    private _location: Location)
+    {
   }
 
   ngOnInit(): void {

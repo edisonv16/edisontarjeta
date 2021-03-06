@@ -63,6 +63,11 @@
         </thead>
         <tbody>
           <tr>
+            <td>{{nombre2}}</td>
+            <td>uppercase</td>
+            <td>{{nombre2 | capitalizado}}</td>
+          </tr>
+          <tr>
             <td>{{nombre}}</td>
             <td>uppercase</td>
             <td>{{nombre | uppercase}}</td>
@@ -154,6 +159,11 @@
             <td>Feccha - Date</td>
             <td>{{fecha | date: 'MMMM - dd':'':idioma}}</td>
           </tr>
+          <tr>
+            <td>{{nombre2}}</td>
+            <td>contraseña</td>
+            <td>{{nombre2 | capitalizado}}</td>
+          </tr>
         </tbody>
       </table>
     </div>
@@ -173,6 +183,22 @@
       </pre>
     </div>
   </div>
+
+  <h3>Dom seguro</h3>
+  <hr>
+  <div class="row">
+    <div class="col">
+      <iframe
+        width="560"
+        height="315"
+        [src]="urlVideo | domseguro"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen>
+      </iframe>
+    </div>
+  </div>
+
 
 
 

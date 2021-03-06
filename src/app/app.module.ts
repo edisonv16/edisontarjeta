@@ -27,6 +27,8 @@ import { HeaderComponent } from './components/header/header.component';
 import { ProductoComponent } from './components/body/producto/producto.component';
 import { BusquedaComponent } from './components/body/busqueda/busqueda.component';
 import { from } from 'rxjs';
+import { CapitalizadoPipe } from './pipes/capitalizado.pipe';
+import { DomseguroPipe } from './pipes/domseguro.pipe';
 
 
 registerLocaleData(localeEs);
@@ -40,7 +42,9 @@ registerLocaleData(localeFr);
     GaleryComponent,
     HeaderComponent,
     ProductoComponent,
-    BusquedaComponent
+    BusquedaComponent,
+    CapitalizadoPipe,
+    DomseguroPipe
   ],
   imports: [
     FormsModule,

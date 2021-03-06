@@ -8,12 +8,15 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title     = 'tarjeta';
   nombre    : string = ' Capitán América';
+  nombre2    : string = 'EdiSOn OsPInA CORREDor';
   personajes: string[] = ['Iroman', 'spiderman', 'thor', 'loki', 'groot'];
   PI        : number = Math.PI;
   porcentaje: number = 0.236;
   salario   : number = 877803;
   fecha     : Date = new Date();
   idioma    : string = 'fr';
+
+  urlVideo  : string = 'https://www.youtube.com/embed/aSI8_c2sJW0';
 
   valorPromesa = new Promise<string>((resolve) =>{
 
