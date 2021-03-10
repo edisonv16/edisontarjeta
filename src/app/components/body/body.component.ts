@@ -9,7 +9,7 @@ export class BodyComponent implements OnInit {
 
     btntele = false;
 
-    constructor() { }
+    constructor() {}
 
     ngOnInit(): void { }
 }

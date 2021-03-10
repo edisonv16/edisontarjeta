@@ -30,6 +30,10 @@ import { from } from 'rxjs';
 import { CapitalizadoPipe } from './pipes/capitalizado.pipe';
 import { DomseguroPipe } from './pipes/domseguro.pipe';
 
+import { HttpClientModule } from '@angular/common/http';
+import { HomeComponent } from './components/home/home.component';
+
+
 
 registerLocaleData(localeEs);
 registerLocaleData(localeFr);
@@ -44,9 +48,11 @@ registerLocaleData(localeFr);
     ProductoComponent,
     BusquedaComponent,
     CapitalizadoPipe,
-    DomseguroPipe
+    DomseguroPipe,
+    HomeComponent
   ],
   imports: [
+    HttpClientModule,
     FormsModule,
     BrowserModule,
     AppRoutingModule,
